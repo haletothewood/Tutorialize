@@ -8,6 +8,11 @@ import Styles from './Styles'
 import { StackNavigator } from 'react-navigation'
 
 export default class SecondScreen extends React.Component {
+
+    static navigationOptions = () => ({
+        title: 'Second Screen'
+    })
+
     render() {
       return (
         <View style={Styles.container}>

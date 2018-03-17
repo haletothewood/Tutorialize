@@ -14,14 +14,17 @@ import SecondScreen from './SecondScreen'
 const RootStack = StackNavigator(
   {
     Home: {
-      screen: HomeScreen,
+      screen: HomeScreen
     },
     Second: {
-      screen: SecondScreen,
-    },
+      screen: SecondScreen
+    }
   },
   {
     initialRouteName: 'Home',
+  },
+  {
+    headerMode: 'screen'
   }
 )
 
