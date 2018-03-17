@@ -12,7 +12,7 @@ export default class HomeScreen extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = { name: 'Enter Name' };
+        this.state = {};
       }
 
     static navigationOptions = () => ({
@@ -22,6 +22,11 @@ export default class HomeScreen extends React.Component {
             backgroundColor: '#F5FCFF'
         }
     })
+
+    handlePageChange = () => {
+        this.state.name &&
+        this.props.navigation.navigate('Second', {name: this.state.name})
+    }
 
     render() {
         return (
@@ -33,14 +38,16 @@ export default class HomeScreen extends React.Component {
                     Navigation
                 </Text>
                 <TextInput
+                    placeholder='Enter Name'
+                    placeholderTextColor='#a3be8c'
                     style={Styles.textinput}
                     onChangeText={(name) => this.setState({name})}
-                    value={this.state.name}
+                    onSubmitEditing={() => this.handlePageChange()}
                 />
                 <Button
-                    color='#88C0D0'
-                    title='Please enter your name and click on this link to see it in action.'
-                    onPress={() => this.props.navigation.navigate('Second', {name: this.state.name})}
+                color='#88C0D0'
+                title='Please enter your name and click on this link to see it in action.'
+                onPress={() => this.handlePageChange()}
                 />
             </View>
         )
