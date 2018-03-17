@@ -1,10 +1,11 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import {
   Platform,
   StyleSheet,
   Text,
   View
-} from 'react-native';
+} from 'react-native'
+import { StackNavigator } from 'react-navigation'
 
 type Props = {};
 export default class App extends Component<Props> {
@@ -21,7 +22,7 @@ export default class App extends Component<Props> {
           Please click on me to see it in action.
         </Text>
       </View>
-    );
+    )
   }
 }
 
@@ -50,4 +51,4 @@ const styles = StyleSheet.create({
     color: '#88C0D0',
     marginBottom: 5,
   }
-});
+})
