@@ -26,22 +26,22 @@ export default class HomeScreen extends React.Component {
     render() {
         return (
             <View style={Styles.container}>
-            <Text style={Styles.welcome}>
-                Welcome to Tutorialize
-            </Text>
-            <Text style={Styles.example}>
-                Navigation
-            </Text>
-            <TextInput
-            style={{fontSize:20,color:'#a3be8c',height:50,width:200,borderBottomColor:'#F5FCFF',textAlign:'center'}}
-            onChangeText={(name) => this.setState({name})}
-            value={this.state.name}
-             />
-            <Button
-                color='#88C0D0'
-                title='Please enter your name and click on this link to see it in action.'
-                onPress={() => this.props.navigation.navigate('Second', {name: this.state.name})}
-            />
+                <Text style={Styles.welcome}>
+                    Welcome to Tutorialize
+                </Text>
+                <Text style={Styles.example}>
+                    Navigation
+                </Text>
+                <TextInput
+                    style={Styles.textinput}
+                    onChangeText={(name) => this.setState({name})}
+                    value={this.state.name}
+                />
+                <Button
+                    color='#88C0D0'
+                    title='Please enter your name and click on this link to see it in action.'
+                    onPress={() => this.props.navigation.navigate('Second', {name: this.state.name})}
+                />
             </View>
         )
     }

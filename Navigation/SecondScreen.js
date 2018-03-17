@@ -22,7 +22,7 @@ export default class SecondScreen extends React.Component {
         return (
             <View style={Styles.container}>
                 <Text style={Styles.welcome}>
-                Hello {name}!
+                    Hello {name}!
                 </Text>
                 <Button
                 color='#88C0D0'

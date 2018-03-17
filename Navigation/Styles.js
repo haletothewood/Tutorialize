@@ -19,5 +19,13 @@ export default Styles = StyleSheet.create({
       fontSize: 30,
       fontWeight: "200",
       marginBottom: 5,
+    },
+    textinput: {
+      fontSize: 20,
+      color: '#a3be8c',
+      height: 50,
+      width: 200,
+      borderBottomColor: '#F5FCFF',
+      textAlign: 'center'
     }
 })
