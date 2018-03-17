@@ -1,9 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
 import React, { Component } from 'react';
 import {
   Platform,
@@ -12,26 +6,19 @@ import {
   View
 } from 'react-native';
 
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' +
-    'Cmd+D or shake for dev menu',
-  android: 'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
-
 type Props = {};
 export default class App extends Component<Props> {
   render() {
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
-          Welcome to React Native!
+          Welcome to Tutorialize
         </Text>
-        <Text style={styles.instructions}>
-          To get started, edit App.js
+        <Text style={styles.example}>
+          Navigation
         </Text>
-        <Text style={styles.instructions}>
-          {instructions}
+        <Text style={styles.link}>
+          Please click on me to see it in action.
         </Text>
       </View>
     );
@@ -43,16 +30,24 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    backgroundColor: '#2e3440',
   },
   welcome: {
     fontSize: 20,
     textAlign: 'center',
+    color: '#F5FCFF',
     margin: 10,
   },
-  instructions: {
+  example: {
     textAlign: 'center',
-    color: '#333333',
+    color: '#B48EAD',
+    fontSize: 30,
+    fontWeight: "200",
     marginBottom: 5,
   },
+  link: {
+    textAlign: 'center',
+    color: '#88C0D0',
+    marginBottom: 5,
+  }
 });
