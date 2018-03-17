@@ -19,10 +19,5 @@ export default Styles = StyleSheet.create({
       fontSize: 30,
       fontWeight: "200",
       marginBottom: 5,
-    },
-    link: {
-      textAlign: 'center',
-      color: '#88C0D0',
-      marginBottom: 5,
     }
 })

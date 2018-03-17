@@ -22,9 +22,6 @@ const RootStack = StackNavigator(
   },
   {
     initialRouteName: 'Home',
-  },
-  {
-    headerMode: 'screen'
   }
 )
 
