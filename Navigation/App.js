@@ -5,20 +5,20 @@ import {
   Text,
   View
 } from 'react-native'
+import Styles from './Styles'
 import { StackNavigator } from 'react-navigation'
 
-type Props = {};
-export default class App extends Component<Props> {
+class HomeScreen extends React.Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
+      <View style={Styles.container}>
+        <Text style={Styles.welcome}>
           Welcome to Tutorialize
         </Text>
-        <Text style={styles.example}>
+        <Text style={Styles.example}>
           Navigation
         </Text>
-        <Text style={styles.link}>
+        <Text style={Styles.link}>
           Please click on me to see it in action.
         </Text>
       </View>
@@ -26,29 +26,14 @@ export default class App extends Component<Props> {
   }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#2e3440',
+const RootStack = StackNavigator({
+  Home: {
+    screen: HomeScreen,
   },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    color: '#F5FCFF',
-    margin: 10,
-  },
-  example: {
-    textAlign: 'center',
-    color: '#B48EAD',
-    fontSize: 30,
-    fontWeight: "200",
-    marginBottom: 5,
-  },
-  link: {
-    textAlign: 'center',
-    color: '#88C0D0',
-    marginBottom: 5,
+});
+
+export default class App extends React.Component {
+  render() {
+    return <RootStack />;
   }
-})
+}
