@@ -45,12 +45,12 @@ export default class App extends Component {
     return (
       !this.state.buttonPressed ?
       <HomePage
-      handleOnPress={this.handleOnPress.bind(this)}
+      handleOnPress={this.handleOnPress}
       />
       :
       <ApiPage
       characterName={this.state.characterName}
-      handleOnPress={this.handleOnPress.bind(this)}
+      handleOnPress={this.handleOnPress}
       />
     )
   }
