@@ -7,6 +7,7 @@ import {
   Button
 } from 'react-native';
 import Styles from './Styles'
+import HomePage from './HomePage'
 import ApiPage from './ApiPage'
 
 export default class App extends Component {
@@ -42,27 +43,15 @@ export default class App extends Component {
 
   render() {
     return (
-      this.state.buttonPressed ?
+      !this.state.buttonPressed ?
+      <HomePage
+      handleOnPress={this.handleOnPress.bind(this)}
+      />
+      :
       <ApiPage
       characterName={this.state.characterName}
       handleOnPress={this.handleOnPress.bind(this)}
       />
-      :
-      <View style={Styles.container}>
-        <Text style={Styles.welcome}>
-          Welcome to Tutorialize!
-        </Text>
-        <Text style={Styles.example}>
-          API's
-        </Text>
-        <Text style={Styles.instructions}>
-          This will call an API that returns a random Game of Thrones character
-        </Text>
-        <Button
-        title='Press'
-        onPress={this.handleOnPress}
-        />
-      </View>
     )
   }
 }
