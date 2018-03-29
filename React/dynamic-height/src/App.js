@@ -4,9 +4,8 @@ import './App.css'
 
 const Rows = new Array(100).fill(1)
 
-const HEADER_MARGIN = 250
-const LINE_HEIGHT = 34
-
+const HEADER_MARGIN = 260
+const LINE_HEIGHT = 36
 
 class App extends Component {
 
