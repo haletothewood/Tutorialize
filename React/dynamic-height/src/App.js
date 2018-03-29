@@ -2,6 +2,12 @@ import React, { Component } from 'react'
 import logo from './logo.svg'
 import './App.css'
 
+const Rows = new Array(100).fill(1)
+
+const HEADER_MARGIN = 250
+const LINE_HEIGHT = 34
+
+
 class App extends Component {
 
   constructor(props) {
@@ -19,6 +25,16 @@ class App extends Component {
     window.removeEventListener("resize", this.updateComponentHeight)
   }
 
+  calculateRows() {
+    return Math.floor((this.state.height-HEADER_MARGIN)/LINE_HEIGHT)
+  }
+
+  renderRows() {
+    return Rows.slice(0, this.calculateRows()).map((e, i) => {
+      return <p key={'text-' + i}>Row {i+1}</p>
+    })
+  }
+
   render() {
     return (
       <div className="App">
@@ -27,8 +43,13 @@ class App extends Component {
           <h1 className="App-title">Welcome to Dynamic Height in React</h1>
         </header>
         <p className="App-intro">
-          The current window height is: {this.state.height}
+          The current window height is now: {this.state.height}
+          <br />
+          The number of rendered rows is now: {this.calculateRows()}
         </p>
+        <div>
+          {this.renderRows()}
+        </div>
       </div>
     )
   }
