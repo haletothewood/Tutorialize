@@ -56,26 +56,26 @@ class App extends Component {
         </header>
         <table className={"App-table"}>
           <tbody>
-          <tr>
-            <th>
-              <p className="App-intro">
-              The number of rendered rows is now: {this.state.rows.length}
-              </p>
-            </th>
-          </tr>
-          <tr>
-            <td>
-              <Infinite elementHeight={40}
-              containerHeight={300}
-              infiniteLoadBeginEdgeOffset={200}
-              onInfiniteLoad={this.handleInfiniteLoad}
-              loadingSpinnerDelegate={this.rowInfiniteLoad()}
-              isInfiniteLoading={this.state.isInfiniteLoading}
-              >
-                {this.state.rows}
-              </Infinite>
-            </td>
-          </tr>
+            <tr>
+              <th>
+                <p className="App-intro">
+                The number of rendered rows is now: {this.state.rows.length}
+                </p>
+              </th>
+            </tr>
+            <tr>
+              <td>
+                <Infinite elementHeight={40}
+                containerHeight={300}
+                infiniteLoadBeginEdgeOffset={200}
+                onInfiniteLoad={this.handleInfiniteLoad}
+                loadingSpinnerDelegate={this.rowInfiniteLoad()}
+                isInfiniteLoading={this.state.isInfiniteLoading}
+                >
+                  {this.state.rows}
+                </Infinite>
+              </td>
+            </tr>
           </tbody>
         </table>
       </div>
