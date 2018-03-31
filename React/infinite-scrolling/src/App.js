@@ -65,15 +65,15 @@ class App extends Component {
           </tr>
           <tr>
             <td>
-            <Infinite elementHeight={40}
-            containerHeight={300}
-            infiniteLoadBeginEdgeOffset={200}
-            onInfiniteLoad={this.handleInfiniteLoad}
-            loadingSpinnerDelegate={this.rowInfiniteLoad()}
-            isInfiniteLoading={this.state.isInfiniteLoading}
-            >
-              {this.state.rows}
-            </Infinite>
+              <Infinite elementHeight={40}
+              containerHeight={300}
+              infiniteLoadBeginEdgeOffset={200}
+              onInfiniteLoad={this.handleInfiniteLoad}
+              loadingSpinnerDelegate={this.rowInfiniteLoad()}
+              isInfiniteLoading={this.state.isInfiniteLoading}
+              >
+                {this.state.rows}
+              </Infinite>
             </td>
           </tr>
           </tbody>
