@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
-import logo from './logo.svg'
 import './App.css'
+import Header from './Header'
 
 const Rows = new Array(100).fill(1)
 
-const HEADER_MARGIN = 260
+const HEADER_MARGIN = 150
+const CONTENT_MARGIN = 110
 const LINE_HEIGHT = 36
 
 class App extends Component {
@@ -12,7 +13,8 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      height: Math.floor(window.innerHeight)
+      height: Math.floor(window.innerHeight),
+      headerHeight: HEADER_MARGIN
     }
   }
 
@@ -21,11 +23,18 @@ class App extends Component {
   }
 
   componentWillUnmount() {
-    window.removeEventListener("resize", this.updateComponentHeight)
+    window.removeEventListener("resize")
+  }
+
+  updateHeaderHeight = (height) => {
+    console.log('height changed: ', height)
+    this.setState({
+      headerHeight: height
+    })
   }
 
   calculateRows() {
-    return Math.floor((this.state.height-HEADER_MARGIN)/LINE_HEIGHT)
+    return Math.floor((this.state.height-this.state.headerHeight-CONTENT_MARGIN)/LINE_HEIGHT)
   }
 
   renderRows() {
@@ -37,10 +46,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to Dynamic Height in React</h1>
-        </header>
+        <Header
+          height={this.state.headerHeight}
+          updateHeight={this.updateHeaderHeight}
+        />
         <p className="App-intro">
           The current window height is now: {this.state.height}
           <br />
