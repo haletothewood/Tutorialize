@@ -27,7 +27,6 @@ class App extends Component {
   }
 
   updateHeaderHeight = (height) => {
-    console.log('height changed: ', height)
     this.setState({
       headerHeight: height
     })
