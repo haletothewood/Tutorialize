@@ -1,0 +1,12 @@
+@keyframes fontbulger {
+  0%, 100% {
+    font-size: 12px;
+  }
+  50% {
+    font-size: 18px;
+  }
+}
+
+h3 {
+   animation: fontbulger 2s infinite;
+}
