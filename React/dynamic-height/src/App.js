@@ -4,7 +4,7 @@ import Header from './Header'
 
 const Rows = new Array(100).fill(1)
 
-const HEADER_MARGIN = 150
+const HEADER_MARGIN = 180
 const CONTENT_MARGIN = 110
 const LINE_HEIGHT = 36
 

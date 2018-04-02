@@ -22,6 +22,7 @@ export default class Header extends Component {
     return <header ref='Header' id='Header' className="App-header" style={{height: this.props.height}}>
       <img src={logo} className="App-logo" alt="logo" />
       <h1 className="App-title">Welcome to Dynamic Height in React</h1>
+      <p>The current header height is now: {this.props.height}</p>
     </header>
   }
 }
