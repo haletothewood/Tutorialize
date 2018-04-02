@@ -47,7 +47,7 @@ export default class App extends Component {
     console.log('%c Submit Event ', Styles.event)
     this.setState({
       message: this.state.value
-    }, () => console.log('State Changed', this.state))
+    }, () => console.log('State changed and we have rendered the new message', this.state))
     event.preventDefault()
   }
 
@@ -55,7 +55,7 @@ export default class App extends Component {
     console.log('%c Change Event ', Styles.event)
     this.setState({
       value: event.target.value
-    }, () => console.log('State Changed', this.state))
+    }, () => console.log('State has changed, but nothing to render', this.state))
   }
 
   render() {
