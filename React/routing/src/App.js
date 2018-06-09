@@ -40,7 +40,7 @@ class App extends Component {
         <div className="Page-container">
           <Route path="/home" component={ Home } />
           <Route path="/about" component={ About } />
-          <Route path="/Links" component={ Links } />
+          <Route path="/links" component={ Links } />
         </div>
       </div>
     );
